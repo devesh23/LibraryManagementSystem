@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+
 <title>LibraryManagementSystem</title>
 
 <!--  Loading the materialize CSS files -->
@@ -10,86 +11,52 @@
 <link type="text/css" rel="stylesheet"
 	href="materialize/css/materialize.min.css" media="screen,projection" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link type="text/css" rel="stylesheet" href="custom.css">
 <!-- --------------------- -->
-<style>
-.col .s4 {
-	padding-left: 1em;
-	padding-right: 1em;
-}
 
-.container .custom {
-	width: 95%;
-}
+<script type="text/javascript"
+	src="https://code.jquery.com/jquery-3.2.1.min.js">
+	
+</script>
+<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+<script type="text/javascript" src="index.js"></script>
 
-.row .col {
-	padding: 0;
-}
-
-h4 {
-	margin: 0;
-}
-
-.transparentBG {
-	background-color: rgba(0, 0, 0, 0.6);
-}
-
-.imgDiv {
-	position: relative;
-}
-
-h2 {
-	position: absolute;
-	top: 200px;
-	left: 0;
-	width: 100%;
-}
-</style>
 </head>
+
 <body>
 
-	<script type="text/javascript"
-		src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-	<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 	<div>
 
-		<!-- navigation bar code -->
-
-		<!-- Front Section Code -->
-		<!-- Image Code -->
 		<div class="row" style="margin-bottom: 0px;">
 
-			<div class="col s12 imgDiv">
-				<img src="Images/LibraryImage.jpg" class="responsive-img">
-				<h2>
-					A Movie in the Park:<br />Kung Fu Panda
+			<div class="col s12 imgDiv center-align">
+				<img src="Images/LibraryImage.jpg" class="responsive-img"
+					style="filter: blur(1px);">
+				<h2 class="white-text">
+					<b>#Knowledge_is_Power</b>
 				</h2>
 			</div>
-			<ul id="dropdown1" class="dropdown-content transparentBG">
 
-				<li><a href="DialogUser.html" class="white-text">User Login</a></li>
-
-				<li><a href="DialogAdmin.html" class="white-text">Librarian
-						Login</a></li>
-
-			</ul>
 			<div>
-			<nav style="position: fixed" class="transparentBG">
-				<div class="nav-wrapper">
-					<a href="index.html" class="flow-text" style="padding-left: 0.5em">Library
-						Management System</a>
-					<ul id="nav-mobile" class="right">
-						<li style="padding-right: 0.5em;"><a class="dropdown-button"
-							href="#" data-activates="dropdown1" data-constrainWidth="false"
-							data-belowOrigin="true"> <i class="material-icons left">lock_outline</i>
-								<span>Login</span> <i class="material-icons right">arrow_drop_down</i>
-						</a></li>
-						<li style="padding-right: 0.5em;"><a href="SignUp.html"
-							class="white-text">Sign Up</a></li>
-					</ul>
-				</div>
-			</nav>
+				<nav style="position: fixed" class="transparentBG">
+					<div class="nav-wrapper">
+						<a href="index.html" class="flow-text" style="padding-left: 0.5em">Library
+							Management System</a>
+						<ul id="nav-mobile" class="right">
+							<li style="padding-right: 0.5em;"><a
+								class="white-text modal-trigger" href="#LoginModal"> <i
+									class="material-icons left">lock_outline</i> <span>Login</span>
+							</a></li>
+							<li style="padding-right: 0.5em;"><a href="SignUp.html"
+								class="white-text">Sign Up</a></li>
+						</ul>
+					</div>
+				</nav>
 			</div>
+
 		</div>
+
+
 
 		<!-- Middle Section Code -->
 
@@ -120,6 +87,116 @@ h2 {
 				</div>
 			</div>
 		</div>
+
+
+
+		<div id="LoginModal" class="modal LoginModal">
+			<div class="modal-content">
+				<div class="row">
+					<div class="col s12">
+						<ul class="tabs">
+							<li class="tab col s6"><a class="active" href="#UserLogin">User
+									Login</a></li>
+							<li class="tab col s6"><a href="#LibraryLogin">Librarian
+									Login</a></li>
+						</ul>
+					</div>
+					<!-- Action for UserLoginForm to be filled -->
+				</div>
+
+				<!-- UserLogin code 
+					Username - "UserName"
+					Password - "PassWord"
+					
+					TODO:
+					Fill the action command
+				 -->
+				<div id="UserLogin" class="col s12">
+					<form class="col s12" name="UserLoginForm" method="post" action=""
+						autocomplete="off">
+
+						<!-- Do not consider this................................... -->
+						<input style="display: none" type="text"
+							name="fakeusernameremembered" /> <input style="display: none"
+							type="password" name="fakepasswordremembered" />
+						<!-- Do not consider this.................................... -->
+
+
+						<div class="row">
+							<div class="input-field col CustomForm s12">
+								<input id="UserName" type="text" class="validate"
+									name="UserName"> <label for="UserName">Enter
+									your Username</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col CustomForm s12">
+								<input id="PassWord" type="password" class="validate"
+									name="PassWord"> <label for="PassWord">Enter
+									Your Password</label>
+							</div>
+						</div>
+					</form>
+					<div class="row">
+						<div class="col s6">
+							<button class="waves-effect waves-light btn" type="submit"
+								form="UserLoginForm" value="Submit">Submit</button>
+						</div>
+						<div class="col s6">
+							<a href="SignUp.html" class="valign-wrapper center-align tiny">New
+								User? Sign Up</a>
+						</div>
+					</div>
+				</div>
+				<!-- Library login Code
+				 
+					ID - "LibraryId"
+					Password - "PassWord"
+					
+					TODO:
+					Fill the action command
+				 -->
+
+
+				<div id="LibraryLogin" class="col s12">
+					<form class="col s12" name="LibraryLoginForm" method="post"
+						action="" autocomplete="off">
+						<input style="display: none" type="text"
+							name="fakeusernameremembered" /> <input style="display: none"
+							type="password" name="fakepasswordremembered" />
+
+						<div class="row">
+							<div class="input-field col CustomForm s12">
+								<input id="id" type="text" class="validate" name="LibraryId">
+								<label for="id">Enter your unique id</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col CustomForm s12">
+								<input id="PassWord" type="password" class="validate"
+									name="PassWord"> <label for="PassWord">Enter
+									Your Password</label>
+							</div>
+						</div>
+					</form>
+					<div class="row">
+						<div class="col s6">
+							<button class="waves-effect waves-light btn" type="submit"
+								form="LibraryLoginForm" value="Submit">Submit</button>
+						</div>
+						<div class="col s6 ">
+							<a href="SignUp.html" class="valign-wrapper center-align tiny">New
+								User? Sign Up</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
 	</div>
 </body>
 </html>

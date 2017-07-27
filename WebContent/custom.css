@@ -1,0 +1,38 @@
+.col .s4 {
+	padding-left: 1em;
+	padding-right: 1em;
+}
+.row .col .CustomForm{
+	padding-left: 1em;
+	padding-right: 1em;
+}
+.container .custom {
+	width: 95%;
+}
+
+.row .col {
+	padding: 0;
+}
+
+h4 {
+	margin: 0;
+}
+
+.transparentBG {
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+.imgDiv {
+	position: relative;
+}
+
+h2 {
+	position: absolute;
+	top: 200px;
+	left: 0;
+	width: 100%;
+}
+.LoginModal{
+	width:25%;
+	height:auto;
+}

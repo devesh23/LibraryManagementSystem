@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>SignUp Page</title>
+
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
+
+<link type="text/css" rel="stylesheet"
+	href="materialize/css/materialize.min.css" media="screen,projection" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+<link type="text/css" rel="stylesheet" href="custom.css">
+
+
+<script type="text/javascript"
+	src="https://code.jquery.com/jquery-3.2.1.min.js">
+	
+</script>
+
+<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+
+<script type="text/javascript" src="index.js"></script>
+
+</head>
+
+<body>
+
+	<div class="row">
+		<!-- Navbar Code -->
+
+		<div>
+			<nav style="position:fixed;">
+				<div class="nav-wrapper">
+					<a href="index.html" class="flow-text" style="padding-left: 0.5em">Library
+						Management System</a>
+					<ul id="nav-mobile" class="right">
+						<li style="padding-right: 0.5em;">Already Registered?</li>
+						<li style="padding-right: 4em;"><a class="white-text"
+							href="index.html"> <span>Log In</span>
+						</a></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+
+		<!-- Register Form 
+	
+	Parameter Name - Name
+	
+	Name - Name
+	Username - UserName
+	email - Email
+	phoneNumber - PhoneNumber
+	Password - PassWord
+	 -->
+		<div class="row"
+			style="height: 50%; width: 50%; top: 50%; left: 50%; z-index: 0px;">
+			<div class="col s12">
+				<div id="register" class="col s12">
+					<form class="col s12" name="SignUpForm" method="post" action="">
+						<div class="form-container">
+							<h3 class="teal-text">Welcome</h3>
+							<div class="row">
+								<div class="input-field col s12">
+									<input id="Name" type="text" class="validate" name="Name">
+									<label for="Name">Name</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field col s12">
+									<input id="UserName" type="text" class="validate"> <label
+										for="UserName">User Name</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field col s12">
+									<input id="email" type="email" class="validate" name="Email">
+									<label for="email">Email</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field col s12">
+									<input id="email-confirm" type="email" class="validate">
+									<label for="email-confirm">Email Confirmation</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field col s12">
+									<input id="phoneNumber" type="text" class="validate"
+										name="PhoneNumber"> <label for="phoneNumber">Mobile
+										Number</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field col s12">
+									<input id="password" type="password" class="validate"
+										name="PassWord"> <label for="password">Password</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field col s12">
+									<input id="password-confirm" type="password" class="validate">
+									<label for="password-confirm">Password Confirmation</label>
+								</div>
+							</div>
+							<center>
+								<button class="btn waves-effect waves-light teal" type="submit"
+									name="action">Submit</button>
+							</center>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
