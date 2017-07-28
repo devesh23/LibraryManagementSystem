@@ -24,6 +24,10 @@
 
 <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 
+
+
+<script type="text/javascript" src="parsley.min.js"></script>
+
 <script type="text/javascript" src="index.js"></script>
 
 </head>
@@ -34,7 +38,7 @@
 		<!-- Navbar Code -->
 
 		<div>
-			<nav style="position:fixed;">
+			<nav >
 				<div class="nav-wrapper">
 					<a href="index.html" class="flow-text" style="padding-left: 0.5em">Library
 						Management System</a>
@@ -58,17 +62,17 @@
 	phoneNumber - PhoneNumber
 	Password - PassWord
 	 -->
-		<div class="row"
+		<div class="row" id="registerSignUp"
 			style="height: 50%; width: 50%; top: 50%; left: 50%; z-index: 0px;">
 			<div class="col s12">
 				<div id="register" class="col s12">
-					<form class="col s12" name="SignUpForm" method="post" action="">
+					<form class="col s12" id="SignUpForm" name="SignUpForm" method="post" action="" >
 						<div class="form-container">
 							<h3 class="teal-text">Welcome</h3>
 							<div class="row">
 								<div class="input-field col s12">
 									<input id="Name" type="text" class="validate" name="Name">
-									<label for="Name">Name</label>
+									<label for="Name" data-error="Please enter a correct name">Name</label>
 								</div>
 							</div>
 							<div class="row">
@@ -80,19 +84,19 @@
 							<div class="row">
 								<div class="input-field col s12">
 									<input id="email" type="email" class="validate" name="Email">
-									<label for="email">Email</label>
+									<label for="email" data-error="Please enter email in Correct Format">Email</label>
 								</div>
 							</div>
 							<div class="row">
 								<div class="input-field col s12">
 									<input id="email-confirm" type="email" class="validate">
-									<label for="email-confirm">Email Confirmation</label>
+									<label for="email-confirm" data-error="Email Does not match" data-success="Email Matches!">Email Confirmation</label>
 								</div>
 							</div>
 							<div class="row">
 								<div class="input-field col s12">
 									<input id="phoneNumber" type="text" class="validate"
-										name="PhoneNumber"> <label for="phoneNumber">Mobile
+										name="PhoneNumber"> <label for="phoneNumber" data-error="please enter a valid phone number">Mobile
 										Number</label>
 								</div>
 							</div>
@@ -104,8 +108,8 @@
 							</div>
 							<div class="row">
 								<div class="input-field col s12">
-									<input id="password-confirm" type="password" class="validate">
-									<label for="password-confirm">Password Confirmation</label>
+									<input id="passwordConfirm" type="password" >
+									<label for="passwordConfirm" data-error="Password not match" data-success="Password Match">Password Confirmation</label>
 								</div>
 							</div>
 							<center>
